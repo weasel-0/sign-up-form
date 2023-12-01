@@ -14,7 +14,9 @@
 h1 {
   margin-bottom: 64px;
 }
-
+img{
+  height: 100vh;
+}
 /* container for img and input */
 .container {
   display: flex;
