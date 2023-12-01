@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <span class="title">CAFÈ &#8482;</span>
+
+    <div class="container">
+      <img src="/assets/coffee.jpg" alt="coffee shop" class="left" />
+
+      <form action="" class="right" method="">
+        <h1>Sign up</h1>
+
+        <div class="divide">
+          <div class="input-container">
+            <label for="firstName" class="labels">FIRST NAME</label>
+            <input
+              type="text"
+              name="first name"
+              id="firstName"
+              required
+              placeholder="John"
+            />
+          </div>
+
+          <div class="input-container">
+            <label for="lastName" class="labels">LAST NAME</label>
+            <input
+              type="text"
+              name="last name"
+              id="lastName"
+              placeholder="Doe"
+            />
+          </div>
+
+          <div class="input-container">
+            <label for="email">EMAIL</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              required
+              placeholder="example@gmail.com"
+            />
+          </div>
+          <div class="input-container">
+            <label for="phoneNo" class="labels">PHONE NO</label>
+            <input
+              type="tel"
+              name="phone number"
+              id="phoneNo"
+              required
+              placeholder="(+12) 12345 89087"
+              pattern="/[\(][\+]\d{2}[\)]\d{5}[\s]\d{5}/g"
+            />
+          </div>
+          <div class="input-container">
+            <label for="password" class="labels">PASSWORD</label>
+            <input type="password" name="password" id="password" required />
+            <!-- <i class="bi bi-eye-slash" id="togglePassword"></i> -->
+            <div id="passwordConditions">
+              <p class="passwordMessage invalid">
+                At least <b>one lowercase letter</b>
+              </p>
+              <p class="passwordMessage invalid">
+                At least <b>one uppercase letter</b>
+              </p>
+              <p class="passwordMessage invalid">At least <b>one number</b></p>
+              <p class="passwordMessage invalid">Minimum <b>8 characters</b></p>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <label for="confirmPass" class="labels">CONFIRM PASSWORD</label>
+            <input
+              type="password"
+              name="confirm password"
+              id="confirmPass"
+              required
+            />
+          </div>
+          <div class="submit">
+            <button>REGISTER</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- <h1>Hello 👋</h1> -->
+    <script src="script.js"></script>
+    <!-- image credits - Tommao wang unsplash->https://unsplash.com/@tommaomaoer  -->
+  </body>
+</html>

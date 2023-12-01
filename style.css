@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+.body {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  margin-bottom: 64px;
+}
+
+/* container for img and input */
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  gap: 150px;
+}
+
+/* input container */
+.divide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 50px;
+  max-width: 800px;
+  /* place-items: center; */
+}
+
+input {
+  display: block;
+  width: 300px;
+  height: auto;
+  margin-top: 6px;
+  padding: 6px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 18px;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.left {
+  width: 40%;
+  height: 900px;
+}
+
+.right {
+  width: 60%;
+}
+
+/* Register button */
+.submit {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-column: span 2;
+  width: 200px;
+  /* max-width: 700px; */
+  margin-top: 20px;
+}
+
+button {
+  width: 150px;
+  height: 45px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #ffb800;
+  color: black;
+  border: 1px solid black;
+  transition: 0.5s ease-in-out;
+}
+
+/* password */
+#passwordConditions {
+  margin-top: 25px;
+}
+
+.passwordMessage {
+  color: black;
+}
+
+#password:focus ~ #passwordConditions .passwordMessage {
+  color: #bf1a2f;
+}
+
+#password:focus ~ #passwordConditions .passwordMessage.valid {
+  color: #018e42;
+}
+
+.wrong {
+  border-bottom: 2px solid #bf1a2f;
+}
+
+.correct {
+  border-bottom: 2px solid #018e42;
+}
+
+/* logo */
+.title {
+  display: inline;
+  position: absolute;
+  color: aliceblue;
+  margin: 0;
+  margin-left: 1px;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.title:hover {
+  box-shadow: inset 150px 0 0 0 #ffb800;
+  transition: all ease 0.5s;
+  color: black;
+}
+
+/* for mobile devices */
+@media (max-width: 500px) {
+  img {
+    display: none;
+  }
+
+  .title {
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .right {
+    width: 100%;
+  }
+  input {
+    width: 150px;
+  }
+  .labels {
+    display: block;
+  }
+  .divide {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: 50px;
+    max-width: 500px;
+    margin: 10px;
+  }
+}
